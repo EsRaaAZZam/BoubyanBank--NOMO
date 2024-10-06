@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Demo">
+
+
+    <test name="Login">
+        <classes>
+            <class name="com.Demo.tests.login.LoginRunner"/>
+        </classes>
+    </test>
+</suite>
