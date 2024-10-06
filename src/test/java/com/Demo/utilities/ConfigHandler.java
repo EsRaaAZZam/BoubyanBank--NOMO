@@ -72,15 +72,7 @@ public class ConfigHandler {
         androidProperties.load(new FileInputStream(ANDROID_CONFIG_PATH));
     }
 
-    /**
-     * Sets vf cash properties.
-     *
-     * @throws IOException the io exception
-     */
-    public static void setVfCashProperties() throws IOException {
-        vfCashProperties = new Properties();
-        vfCashProperties.load(new FileInputStream(VF_CASH_CONFIG_PATH));
-    }
+
 
     /**
      * Sets v usersh properties.
@@ -93,35 +85,6 @@ public class ConfigHandler {
     }
 
 
-    /**
-     * Sets credit cards properties.
-     *
-     * @throws IOException the io exception
-     */
-    public static void setCreditCardsProperties() throws IOException {
-        creditCardsProperties = new Properties();
-        creditCardsProperties.load(new FileInputStream(CREDIT_CARDS_CONFIG_PATH));
-    }
-
-    /**
-     * Sets scratch cards properties.
-     *
-     * @throws IOException the io exception
-     */
-    public static void setScratchCardsProperties() throws IOException {
-        scratchCardsProperties = new Properties();
-        scratchCardsProperties.load(new FileInputStream(SCRATCH_CARDS_CONFIG_PATH));
-    }
-
-    /**
-     * Sets rate planes properties.
-     *
-     * @throws IOException the io exception
-     */
-    public static void setRatePlanesProperties() throws IOException {
-        ratePlanesProperties = new Properties();
-        ratePlanesProperties.load(new FileInputStream(RATE_PLANES_CONFIG_PATH));
-    }
 
     /**
      * Gets android properties.
@@ -132,14 +95,6 @@ public class ConfigHandler {
         return androidProperties;
     }
 
-    /**
-     * Gets vf cash properties.
-     *
-     * @return the vf cash properties
-     */
-    public static Properties getVfCashProperties() {
-        return vfCashProperties;
-    }
 
     /**
      * Gets v users properties.
@@ -151,33 +106,6 @@ public class ConfigHandler {
     }
 
 
-    /**
-     * Gets credit cards properties.
-     *
-     * @return the credit cards properties
-     */
-    public static Properties getCreditCardsProperties() {
-        return creditCardsProperties;
-    }
-
-
-    /**
-     * Gets scratch cards properties.
-     *
-     * @return the scratch cards properties
-     */
-    public static Properties getScratchCardsProperties() {
-        return scratchCardsProperties;
-    }
-
-    /**
-     * Gets rate planes properties.
-     *
-     * @return the rate planes properties
-     */
-    public static Properties getRatePlanesProperties() {
-        return ratePlanesProperties;
-    }
 
     /**
      * Gets ios properties.
@@ -188,14 +116,8 @@ public class ConfigHandler {
         return iOSProperties;
     }
 
-    /**
-     * Update scratch cards config.
-     *
-     * @throws IOException the io exception
-     */
-    public static void updateScratchCardsConfig() throws IOException {
-        scratchCardsProperties.store(new FileOutputStream(SCRATCH_CARDS_CONFIG_PATH), null);
-    }
+
+
 
     /**
      * Update credit cards config.
@@ -206,12 +128,5 @@ public class ConfigHandler {
         creditCardsProperties.store(new FileOutputStream(CREDIT_CARDS_CONFIG_PATH), null);
     }
 
-    /**
-     * Update vf cash config.
-     *
-     * @throws IOException the io exception
-     */
-    public static void updateVFCashConfig() throws IOException {
-        vfCashProperties.store(new FileOutputStream(VF_CASH_CONFIG_PATH), null);
-    }
+
 }

@@ -77,4 +77,9 @@ public class Device {
     }
 
 
+    public void closeIOSApp() {
+        if (driverSingleton.getDriver() != null) {
+            driverSingleton.getDriver().terminateApp(ConfigHandler.getIOSProperties().getProperty("appPackage"));
+        }
+    }
 }

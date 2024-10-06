@@ -99,18 +99,14 @@ public class HooksHandler extends BaseTest {
      */
     @After(order = 0)
     public void tearDown() {
-        device.closeApp();
-        //device.resetApp();
+        if (androidPlatform) {
+            device.closeApp();
         server.closeAppiumServer();
+        } else
+            device.closeIOSApp();
+
     }
 
-    /**
-     * Close message app in background.
-     */
-    @After("@Close-MessagesAppIn-Background")
-    public void closeMessageAppInBackground() {
-        device.terminateApp("messageAppPackage");
-    }
 
     /**
      * After step.
